@@ -91,7 +91,7 @@ h6 {
 /* ========|| General Styling ||========= */
 body {
   font-family: var(--ff-base);
-  background-image: url(images/bg-mobile.png);
+  background: url(images/bg-mobile.png) no-repeat;
   color: white;
 }
 /* ==========|| Main Styling ||========== */
