@@ -15,6 +15,7 @@
   --spacing-xsmall: 0.25rem;
   --spacing-small: 0.5em;
   --spacing-regular: 1em;
+  --spacing-semi-medium: 1.5em;
   --spacing-medium: 2em;
   --spacing-large: 3em;
   --spacing-xlarge: 6em;
@@ -52,7 +53,6 @@ body {
 
 body {
   line-height: 1.5;
-  font-family: var(--ff-base);
   text-rendering: optimizeSpeed;
 }
 
@@ -89,9 +89,37 @@ h6 {
 }
 
 /* ========|| General Styling ||========= */
-
+body {
+  font-family: var(--ff-base);
+  background-image: url(images/bg-mobile.png);
+  color: white;
+}
 /* ==========|| Main Styling ||========== */
+.main {
+  margin: var(--spacing-xlarge) var(--spacing-semi-medium);
+  display: grid;
+  gap: var(--spacing-regular);
+}
 
+.header, .storage-info {
+  padding: var(--spacing-medium);
+  background-color: var(--clr-neutral-700);
+}
+
+.header__icons {
+  display: flex;
+  gap: 1em;
+}
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.25em;
+  height: 3.25em;
+  background-color: var(--clr-neutral-900);
+  border-radius: .75em;
+
+}
 /* ============|| Utilities ||=========== */
 
 /* ===========|| Breakpoints ||========== */
