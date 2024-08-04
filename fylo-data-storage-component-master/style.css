@@ -102,7 +102,7 @@ body {
   margin: var(--spacing-xlarge) var(--spacing-semi-medium);
   display: grid;
   gap: var(--spacing-regular);
-  max-width: 80%;
+  max-width: 70%;
   margin-inline: auto;
 }
 
@@ -121,6 +121,7 @@ body {
 .header__icons {
   display: flex;
   gap: 1em;
+  flex-wrap: wrap;
 }
 .header__container {
   display: flex;
@@ -172,7 +173,7 @@ body {
   background-color: var(--clr-neutral-100);
   display: flex;
   position: absolute;
-  inset: 10em 0 9em 50%;
+  inset: 80% 0 9em 50%;
   padding: var(--spacing-xsmall);
   transform: translateX(-50%);
   max-width: 12em;
@@ -208,6 +209,11 @@ body {
 /* ============|| Utilities ||=========== */
 
 /* ===========|| Breakpoints ||========== */
+/* @media (min-width: 505px) {
+  .storage-info__remaining-container {
+    inset: 9em 0 9em 50%;
+  }
+} */
 @media (min-width: 800px) {
   body {
     place-content: center;
@@ -221,6 +227,6 @@ body {
   }
   .storage-info__remaining-container {
     inset: -3em 0 0 95%;
-    transform: translateX(-95%);
+    transform: translate(-95%);
   }
 }
