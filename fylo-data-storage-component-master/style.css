@@ -91,6 +91,7 @@ h6 {
 
 /* ========|| General Styling ||========= */
 body {
+
   font-family: var(--ff-base);
   background: url(images/bg-mobile.png) no-repeat;
   background-size:cover;
@@ -101,14 +102,17 @@ body {
   margin: var(--spacing-xlarge) var(--spacing-semi-medium);
   display: grid;
   gap: var(--spacing-regular);
+  max-width: 80%;
+  margin-inline: auto;
 }
 
 .header, .storage-info {
   padding: var(--spacing-semi-large);
   background-color: var(--clr-neutral-700);
 }
+
 .header {
-  border-radius: 1em 7em 1em 1em;
+  border-radius: .75em 7em .75em .75em;
 }
 
 .header__logo {
@@ -130,6 +134,7 @@ body {
 
 .storage-info {
   position: relative;
+  border-radius: .75em;
 }
 .storage-info__progress-container {
   background-color: hsl(from var(--clr-neutral-900) h s l / .5);
@@ -167,7 +172,9 @@ body {
   background-color: var(--clr-neutral-100);
   display: flex;
   position: absolute;
-  inset: 9em 5em;
+  inset: 10em 0 9em 50%;
+  padding: var(--spacing-xsmall);
+  transform: translateX(-50%);
   max-width: 12em;
   height: 5em;
   align-items: center;
@@ -199,3 +206,15 @@ body {
 /* ============|| Utilities ||=========== */
 
 /* ===========|| Breakpoints ||========== */
+@media (min-width: 600px) {
+  body {
+    place-content: center;
+  }
+  .main {
+    grid-template-columns: 1fr 3fr;
+  }
+  .header {
+    max-width: 22.5em;
+    min-width: 20em;
+  }
+}
