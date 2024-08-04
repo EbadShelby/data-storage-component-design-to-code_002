@@ -209,11 +209,6 @@ body {
 /* ============|| Utilities ||=========== */
 
 /* ===========|| Breakpoints ||========== */
-/* @media (min-width: 505px) {
-  .storage-info__remaining-container {
-    inset: 9em 0 9em 50%;
-  }
-} */
 @media (min-width: 800px) {
   body {
     place-content: center;
@@ -228,5 +223,20 @@ body {
   .storage-info__remaining-container {
     inset: -3em 0 0 95%;
     transform: translate(-95%);
+    border-radius: 0.75em .75em 0 .75em;
+  }
+  .storage-info__remaining-container::after {
+    content: '';
+    position: absolute;
+    bottom: -45%;
+    left: 9.05em; /* Position the tail on the right side */
+
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 2em 2em; /* Adjust to get the right triangle shape */
+    
+    border-color: transparent transparent transparent var(--clr-neutral-100); /* Tail color matches the bubble */
+    transform: translateY(-50%) rotate(90deg); /* Center the tail vertically */
   }
 }
