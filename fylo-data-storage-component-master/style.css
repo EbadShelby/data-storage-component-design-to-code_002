@@ -176,11 +176,13 @@ body {
   padding: var(--spacing-xsmall);
   transform: translateX(-50%);
   max-width: 12em;
+  min-width: 11em;
   height: 5em;
   align-items: center;
   justify-content: center;
   border-radius: .75em;
 }
+
 .storage-info__remaining {
 
   font-weight: var(--fw-bold);
@@ -206,7 +208,7 @@ body {
 /* ============|| Utilities ||=========== */
 
 /* ===========|| Breakpoints ||========== */
-@media (min-width: 600px) {
+@media (min-width: 800px) {
   body {
     place-content: center;
   }
@@ -216,5 +218,9 @@ body {
   .header {
     max-width: 22.5em;
     min-width: 20em;
+  }
+  .storage-info__remaining-container {
+    inset: -3em 0 0 95%;
+    transform: translateX(-95%);
   }
 }
